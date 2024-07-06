@@ -78,7 +78,6 @@ async def remove_from_queue(ctx):
 bot.add_handler(
     CommandHandler(
         BotCommands.ForceStartCommand,
-        remove_from_queue,
-        filter=CustomFilters.authorized,
+        remove_from_queue
     )
 )
