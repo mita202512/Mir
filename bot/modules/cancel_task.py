@@ -161,7 +161,7 @@ async def cancel_all_update(ctx):
 
 bot.add_handler(
     CommandHandler(
-        BotCommands.CancelTaskCommand, cancel_task, filter=CustomFilters.authorized
+        BotCommands.CancelTaskCommand, cancel_task
     )
 )
 bot.add_handler(
