@@ -445,10 +445,10 @@ async def ytdlleech(ctx):
 
 
 bot.add_handler(
-    CommandHandler(BotCommands.YtdlCommand, ytdl, filter=CustomFilters.authorized)
+    CommandHandler(BotCommands.YtdlCommand, ytdl)
 )
 bot.add_handler(
     CommandHandler(
-        BotCommands.YtdlLeechCommand, ytdlleech, filter=CustomFilters.authorized
+        BotCommands.YtdlLeechCommand, ytdlleech
     )
 )
