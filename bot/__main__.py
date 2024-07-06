@@ -90,21 +90,14 @@ async def stats(ctx):
 
 async def start(ctx):
     buttons = ButtonMaker()
-    buttons.ubutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.ubutton("Owner", "https://t.me/anas_tayyar")
+    buttons.ubutton("Marvel Cloud", "https://t.me/marvelcloud")
+    buttons.ubutton("Support", "https://t.me/marvelcloudsupport")
     reply_markup = buttons.build_menu(2)
-    if await CustomFilters.authorized(ctx):
-        start_string = f"""
+    start_string = f"""
 This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
-        await sendMessage(ctx.event.message, start_string, reply_markup)
-    else:
-        await sendMessage(
-            ctx.event.message,
-            "You Are not authorized user! Deploy your own mirror-leech bot",
-            reply_markup,
-        )
+    await sendMessage(ctx.event.message, start_string, reply_markup)
 
 
 async def restart(ctx):
@@ -359,15 +352,15 @@ async def main():
         CommandHandler(BotCommands.RestartCommand, restart, filter=CustomFilters.sudo)
     )
     bot.add_handler(
-        CommandHandler(BotCommands.PingCommand, ping, filter=CustomFilters.authorized)
+        CommandHandler(BotCommands.PingCommand, ping)
     )
     bot.add_handler(
         CommandHandler(
-            BotCommands.HelpCommand, bot_help, filter=CustomFilters.authorized
+            BotCommands.HelpCommand, bot_help
         )
     )
     bot.add_handler(
-        CommandHandler(BotCommands.StatsCommand, stats, filter=CustomFilters.authorized)
+        CommandHandler(BotCommands.StatsCommand, stats)
     )
     LOGGER.info("Bot Started!")
     signal(SIGINT, exit_clean_up)
