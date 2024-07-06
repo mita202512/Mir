@@ -18,7 +18,7 @@ basicConfig(
 
 qbittorrent_client = qbClient(
     host="localhost",
-    port=8090,
+    port=7860,
     VERIFY_WEBUI_CERTIFICATE=False,
     REQUESTS_ARGS={"timeout": (30, 60)},
     HTTPADAPTER_ARGS={"pool_maxsize": 200, "pool_block": True},
