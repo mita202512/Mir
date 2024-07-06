@@ -356,7 +356,7 @@ async def jd_leech(ctx):
 
 
 bot.add_handler(
-    CommandHandler(BotCommands.MirrorCommand, mirror
+    CommandHandler(BotCommands.MirrorCommand, mirror)
 )
 bot.add_handler(
     CommandHandler(
