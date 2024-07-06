@@ -288,5 +288,5 @@ async def clone(ctx):
 
 
 bot.add_handler(
-    CommandHandler(BotCommands.CloneCommand, clone, filter=CustomFilters.authorized)
+    CommandHandler(BotCommands.CloneCommand, clone)
 )
