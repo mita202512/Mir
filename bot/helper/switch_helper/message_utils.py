@@ -1,7 +1,7 @@
 from time import time
 from asyncio import sleep
 
-from bot import config_dict, LOGGER, status_dict, task_dict_lock, Intervals, bot, user
+from bot import config_dict, LOGGER, status_dict, task_dict_lock, Intervals, bot
 from bot.helper.ext_utils.bot_utils import setInterval
 from bot.helper.ext_utils.status_utils import get_readable_message
 
@@ -31,7 +31,7 @@ async def sendFile(msg, file, description=""):
 
 
 async def sendRss(text):
-    client = user or bot
+    client = bot
     RC = config_dict["RSS_CHAT"]
     if "|" in RC:
         commmunity_id, group_id = RC.split("|")
