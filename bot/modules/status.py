@@ -149,7 +149,7 @@ async def status_pages(ctx):
 
 bot.add_handler(
     CommandHandler(
-        BotCommands.StatusCommand, mirror_status, filter=CustomFilters.authorized
+        BotCommands.StatusCommand, mirror_status
     )
 )
 bot.add_handler(CallbackQueryHandler(status_pages, filter=regexp("^status")))
