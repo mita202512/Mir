@@ -356,28 +356,28 @@ async def jd_leech(ctx):
 
 
 bot.add_handler(
-    CommandHandler(BotCommands.MirrorCommand, mirror, filter=CustomFilters.authorized)
+    CommandHandler(BotCommands.MirrorCommand, mirror
 )
 bot.add_handler(
     CommandHandler(
-        BotCommands.QbMirrorCommand, qb_mirror, filter=CustomFilters.authorized
+        BotCommands.QbMirrorCommand, qb_mirror
     )
 )
 bot.add_handler(
-    CommandHandler(BotCommands.LeechCommand, leech, filter=CustomFilters.authorized)
+    CommandHandler(BotCommands.LeechCommand, leech)
 )
 bot.add_handler(
     CommandHandler(
-        BotCommands.QbLeechCommand, qb_leech, filter=CustomFilters.authorized
-    )
-)
-bot.add_handler(
-    CommandHandler(
-        BotCommands.JdMirrorCommand, jd_mirror, filter=CustomFilters.authorized
+        BotCommands.QbLeechCommand, qb_leech
     )
 )
 bot.add_handler(
     CommandHandler(
-        BotCommands.JdLeechCommand, jd_leech, filter=CustomFilters.authorized
+        BotCommands.JdMirrorCommand, jd_mirror
+    )
+)
+bot.add_handler(
+    CommandHandler(
+        BotCommands.JdLeechCommand, jd_leech
     )
 )
