@@ -44,5 +44,5 @@ async def countNode(ctx):
 
 
 bot.add_handler(
-    CommandHandler(BotCommands.CountCommand, countNode, filter=CustomFilters.authorized)
+    CommandHandler(BotCommands.CountCommand, countNode)
 )
